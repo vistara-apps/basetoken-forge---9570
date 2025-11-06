@@ -16,10 +16,10 @@ const GameProgress = ({ stats }) => {
   return (
     <div className="space-y-4">
       <div className="text-center">
-        <h3 className="text-lg font-semibold text-red-600 mb-2">Level {level}</h3>
+        <h3 className="text-lg font-semibold text-neon-red mb-2">Level {level}</h3>
         <div className="w-full bg-space-dark rounded-full h-2 mb-2">
           <div 
-            className="bg-gradient-to-r from-neon-blue to-neon-purple h-2 rounded-full transition-all duration-500"
+            className="bg-gradient-to-r from-neon-red to-neon-purple h-2 rounded-full transition-all duration-500 retro-glow"
             style={{ width: `${progressPercentage}%` }}
           ></div>
         </div>
@@ -29,17 +29,17 @@ const GameProgress = ({ stats }) => {
       </div>
 
       <div>
-        <h4 className="text-sm font-medium text-red-600 mb-2">Achievements</h4>
+        <h4 className="text-sm font-medium text-neon-red mb-2">Achievements</h4>
         <div className="space-y-2">
           {achievements.map((achievement) => {
             const Icon = achievement.icon;
             return (
               <div 
                 key={achievement.id}
-                className={`flex items-center space-x-2 p-2 rounded ${
+                className={`flex items-center space-x-2 p-2 rounded retro-card ${
                   achievement.unlocked 
-                    ? 'bg-green-500/20 text-green-400' 
-                    : 'bg-gray-500/20 text-gray-500'
+                    ? 'bg-green-500/20 text-green-400 border border-green-500' 
+                    : 'bg-gray-500/20 text-gray-500 border border-gray-600'
                 }`}
               >
                 <Icon size={16} />

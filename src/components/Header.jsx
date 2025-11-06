@@ -12,11 +12,11 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-space-blue rounded-lg">
+            <div className="p-2 bg-space-red rounded-lg retro-glow">
               <Coins className="text-white" size={24} />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-red-600">BaseToken Forge</h1>
+              <h1 className="text-xl font-bold text-neon-red">BaseToken Forge</h1>
               <p className="text-sm text-gray-400">ERC20 Token Creation Game</p>
             </div>
           </div>

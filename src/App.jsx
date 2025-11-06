@@ -38,14 +38,14 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-space-gradient">
+    <div className="min-h-screen bg-space-gradient scanlines">
       <Header />
       
       <div className="container mx-auto px-4 py-8">
         {!isConnected ? (
           <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
-            <div className="glass-effect rounded-2xl p-8 max-w-md w-full">
-              <h1 className="text-3xl font-bold text-red-600 mb-4">
+            <div className="glass-effect rounded-2xl p-8 max-w-md w-full retro-card">
+              <h1 className="text-3xl font-bold text-neon-red mb-4">
                 Welcome to BaseToken Forge
               </h1>
               <p className="text-gray-300 mb-6">
@@ -58,7 +58,7 @@ function App() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
             {/* Sidebar Navigation */}
             <div className="lg:col-span-1">
-              <div className="glass-effect rounded-xl p-4 mb-6">
+              <div className="glass-effect rounded-xl p-4 mb-6 retro-glow">
                 <GameProgress stats={gameStats} />
               </div>
               
@@ -72,8 +72,8 @@ function App() {
                         onClick={() => setActiveTab(tab.id)}
                         className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
                           activeTab === tab.id
-                            ? 'bg-space-blue text-red-600 neon-border'
-                            : 'text-gray-300 hover:bg-space-light hover:text-white'
+                            ? 'bg-space-red text-white neon-border'
+                            : 'text-gray-300 hover:bg-space-light hover:text-red-400'
                         }`}
                       >
                         <Icon size={20} />

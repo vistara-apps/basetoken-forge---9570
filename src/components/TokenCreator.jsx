@@ -162,7 +162,7 @@ const TokenCreator = ({ onTokenCreated, gameStats }) => {
                 value={formData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
                 placeholder="e.g., My Awesome Token"
-                className={`w-full px-4 py-3 bg-space-dark border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-blue ${
+                className={`w-full px-4 py-3 bg-space-dark border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-red ${
                   errors.name ? 'border-red-500' : 'border-gray-600'
                 }`}
               />
@@ -178,7 +178,7 @@ const TokenCreator = ({ onTokenCreated, gameStats }) => {
                 value={formData.symbol}
                 onChange={(e) => handleInputChange('symbol', e.target.value.toUpperCase())}
                 placeholder="e.g., MAT"
-                className={`w-full px-4 py-3 bg-space-dark border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-blue ${
+                className={`w-full px-4 py-3 bg-space-dark border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-red ${
                   errors.symbol ? 'border-red-500' : 'border-gray-600'
                 }`}
               />
@@ -194,7 +194,7 @@ const TokenCreator = ({ onTokenCreated, gameStats }) => {
                 onChange={(e) => handleInputChange('description', e.target.value)}
                 placeholder="Describe your token's purpose and utility..."
                 rows={3}
-                className={`w-full px-4 py-3 bg-space-dark border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-blue ${
+                className={`w-full px-4 py-3 bg-space-dark border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-red ${
                   errors.description ? 'border-red-500' : 'border-gray-600'
                 }`}
               />
@@ -215,7 +215,7 @@ const TokenCreator = ({ onTokenCreated, gameStats }) => {
                 value={formData.totalSupply}
                 onChange={(e) => handleInputChange('totalSupply', e.target.value)}
                 placeholder="e.g., 1000000"
-                className={`w-full px-4 py-3 bg-space-dark border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-blue ${
+                className={`w-full px-4 py-3 bg-space-dark border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-red ${
                   errors.totalSupply ? 'border-red-500' : 'border-gray-600'
                 }`}
               />
@@ -232,7 +232,7 @@ const TokenCreator = ({ onTokenCreated, gameStats }) => {
               <select
                 value={formData.decimals}
                 onChange={(e) => handleInputChange('decimals', Number(e.target.value))}
-                className="w-full px-4 py-3 bg-space-dark border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-neon-blue"
+                className="w-full px-4 py-3 bg-space-dark border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-neon-red"
               >
                 <option value={18}>18 (Standard)</option>
                 <option value={8}>8</option>
@@ -244,11 +244,11 @@ const TokenCreator = ({ onTokenCreated, gameStats }) => {
               </p>
             </div>
 
-            <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
+            <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4 retro-card">
               <div className="flex items-start space-x-3">
-                <Info className="text-blue-400 mt-0.5" size={16} />
+                <Info className="text-red-400 mt-0.5" size={16} />
                 <div>
-                  <h4 className="text-blue-400 font-medium text-sm">Token Economics Tip</h4>
+                  <h4 className="text-red-400 font-medium text-sm">Token Economics Tip</h4>
                   <p className="text-gray-300 text-sm mt-1">
                     Consider your token's use case when setting supply. Utility tokens often have larger supplies, 
                     while governance tokens may have smaller, more controlled supplies.
@@ -262,29 +262,29 @@ const TokenCreator = ({ onTokenCreated, gameStats }) => {
       case 3:
         return (
           <div className="space-y-6">
-            <div className="bg-space-light/50 rounded-lg p-6 border border-red-600">
-              <h4 className="text-lg font-semibold text-red-600 mb-4">Token Summary</h4>
+            <div className="bg-space-light/50 rounded-lg p-6 border border-red-600 retro-card">
+              <h4 className="text-lg font-semibold text-neon-red mb-4">Token Summary</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <p className="text-gray-400 text-sm">Name</p>
-                  <p className="text-red-600 font-medium">{formData.name}</p>
+                  <p className="text-neon-red font-medium">{formData.name}</p>
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Symbol</p>
-                  <p className="text-red-600 font-medium">{formData.symbol}</p>
+                  <p className="text-neon-red font-medium">{formData.symbol}</p>
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Total Supply</p>
-                  <p className="text-red-600 font-medium">{Number(formData.totalSupply).toLocaleString()}</p>
+                  <p className="text-neon-red font-medium">{Number(formData.totalSupply).toLocaleString()}</p>
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Decimals</p>
-                  <p className="text-red-600 font-medium">{formData.decimals}</p>
+                  <p className="text-neon-red font-medium">{formData.decimals}</p>
                 </div>
               </div>
               <div className="mt-4">
                 <p className="text-gray-400 text-sm">Description</p>
-                <p className="text-red-600">{formData.description}</p>
+                <p className="text-neon-red">{formData.description}</p>
               </div>
             </div>
 
@@ -297,7 +297,7 @@ const TokenCreator = ({ onTokenCreated, gameStats }) => {
               </div>
             )}
 
-            <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4">
+            <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 retro-card">
               <div className="flex items-start space-x-3">
                 <AlertCircle className="text-yellow-400 mt-0.5" size={16} />
                 <div>
@@ -321,12 +321,12 @@ const TokenCreator = ({ onTokenCreated, gameStats }) => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-red-600 mb-2">Create Token</h2>
+          <h2 className="text-2xl font-bold text-neon-red mb-2">Create Token</h2>
           <p className="text-gray-400">
             Launch your own ERC20 token on Base Sepolia testnet
           </p>
         </div>
-        <div className="flex items-center space-x-2 text-neon-blue">
+        <div className="flex items-center space-x-2 text-neon-red">
           <Coins size={24} />
           <span className="font-medium">Level {gameStats.level}</span>
         </div>
@@ -340,7 +340,7 @@ const TokenCreator = ({ onTokenCreated, gameStats }) => {
               currentStep > index + 1 
                 ? 'bg-green-500 border-green-500 text-white' 
                 : currentStep === index + 1
-                ? 'bg-neon-blue border-neon-blue text-white'
+                ? 'bg-neon-red border-neon-red text-white'
                 : 'border-gray-600 text-gray-400'
             }`}>
               {currentStep > index + 1 ? (
@@ -359,52 +359,65 @@ const TokenCreator = ({ onTokenCreated, gameStats }) => {
       </div>
 
       {/* Step Content */}
-      <div className="bg-space-light/30 rounded-lg p-6 border border-red-600">
+      <div className="bg-space-light/30 rounded-lg p-6 border border-red-600 retro-card">
         <div className="mb-6">
-          <h3 className="text-xl font-semibold text-red-600 mb-2">
-            {steps[currentStep - 1].title}
-          </h3>
-          <p className="text-gray-400">
-            {steps[currentStep - 1].description}
-          </p>
+          <h3 className="text-xl font-semibold text-neon-red mb-2">{steps[currentStep - 1].title}</h3>
+          <p className="text-gray-400 text-sm">{steps[currentStep - 1].description}</p>
         </div>
 
         {renderStepContent()}
+
+        {/* Navigation Buttons */}
+        <div className="flex justify-between mt-6">
+          <button
+            onClick={handlePrevious}
+            disabled={currentStep === 1}
+            className="px-6 py-3 bg-space-dark border border-red-600 text-red-400 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-space-light transition-all"
+          >
+            Previous
+          </button>
+
+          {currentStep < 3 ? (
+            <button
+              onClick={handleNext}
+              className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all retro-glow"
+            >
+              Next
+            </button>
+          ) : (
+            <button
+              onClick={deployToken}
+              disabled={isCreating}
+              className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2 retro-glow"
+            >
+              {isCreating ? (
+                <>
+                  <Loader2 className="animate-spin" size={20} />
+                  <span>Deploying...</span>
+                </>
+              ) : (
+                <>
+                  <Coins size={20} />
+                  <span>Deploy Token</span>
+                </>
+              )}
+            </button>
+          )}
+        </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex justify-between">
-        <button
-          onClick={handlePrevious}
-          disabled={currentStep === 1}
-          className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-        >
-          Previous
-        </button>
-
-        {currentStep < 3 ? (
-          <button
-            onClick={handleNext}
-            className="px-6 py-3 bg-neon-blue text-white rounded-lg hover:bg-blue-600 transition-colors"
-          >
-            Next
-          </button>
-        ) : (
-          <button
-            onClick={deployToken}
-            disabled={isCreating}
-            className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center space-x-2"
-          >
-            {isCreating ? (
-              <>
-                <Loader2 className="animate-spin" size={20} />
-                <span>Deploying...</span>
-              </>
-            ) : (
-              <span>Deploy Token</span>
-            )}
-          </button>
-        )}
+      {/* Educational Tips */}
+      <div className="bg-space-light/20 rounded-lg p-4 border border-red-600 retro-card">
+        <div className="flex items-start space-x-3">
+          <Info className="text-red-400 mt-0.5" size={16} />
+          <div>
+            <h4 className="text-red-400 font-medium text-sm mb-2">Learning Tip</h4>
+            <p className="text-gray-300 text-sm">
+              ERC20 tokens are the standard for fungible tokens on Ethereum and compatible chains like Base. 
+              They follow a specific interface that allows them to be easily integrated with wallets, exchanges, and dApps.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
