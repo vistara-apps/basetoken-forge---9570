@@ -1,29 +1,121 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  margin: 0;
-  font-family: 'Press Start 2P', cursive; /* Pixelated font */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #0a0f1c 0%, #1a2332 50%, #0066ff 100%);
-  min-height: 100vh;
-  /* Removed pixelated background image */
+.bg-space-dark {
+  background-color: #1a1a1a;
 }
 
-glass-effect {
-  backdrop-filter: blur(10px);
-  background: rgba(26, 35, 50, 0.3);
+.bg-space-light {
+  background-color: #2a2a2a;
+}
+
+.bg-space-blue {
+  background-color: #1e90ff;
+}
+
+.bg-gradient {
+  background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(255,0,0,1) 100%);
 }
 
 .neon-border {
-  border: 1px solid #00d4ff;
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  border: 2px solid #ff0000;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.text-red-600 {
+  color: #ff0000;
+}
+
+.text-gray-400 {
+  color: #b0b0b0;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-yellow-400 {
+  color: #ffd700;
+}
+
+.text-blue-400 {
+  color: #1e90ff;
+}
+
+.text-green-400 {
+  color: #32cd32;
+}
+
+.text-purple-400 {
+  color: #9370db;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0.75rem;
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.5rem;
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }

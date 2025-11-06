@@ -8,7 +8,7 @@ const Header = () => {
   const { chain } = useNetwork();
 
   return (
-    <header className="glass-effect border-b border-white/10">
+    <header className="glass-effect border-b border-red-600">
       <div className="container mx-auto px-4 py-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-3">
@@ -16,7 +16,7 @@ const Header = () => {
               <Coins className="text-white" size={24} />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-white">BaseToken Forge</h1>
+              <h1 className="text-xl font-bold text-red-600">BaseToken Forge</h1>
               <p className="text-sm text-gray-400">ERC20 Token Creation Game</p>
             </div>
           </div>

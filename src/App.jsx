@@ -45,7 +45,7 @@ function App() {
         {!isConnected ? (
           <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
             <div className="glass-effect rounded-2xl p-8 max-w-md w-full">
-              <h1 className="text-3xl font-bold text-white mb-4">
+              <h1 className="text-3xl font-bold text-red-600 mb-4">
                 Welcome to BaseToken Forge
               </h1>
               <p className="text-gray-300 mb-6">
@@ -72,7 +72,7 @@ function App() {
                         onClick={() => setActiveTab(tab.id)}
                         className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
                           activeTab === tab.id
-                            ? 'bg-space-blue text-white neon-border'
+                            ? 'bg-space-blue text-red-600 neon-border'
                             : 'text-gray-300 hover:bg-space-light hover:text-white'
                         }`}
                       >

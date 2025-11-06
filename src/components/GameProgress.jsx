@@ -16,7 +16,7 @@ const GameProgress = ({ stats }) => {
   return (
     <div className="space-y-4">
       <div className="text-center">
-        <h3 className="text-lg font-semibold text-white mb-2">Level {level}</h3>
+        <h3 className="text-lg font-semibold text-red-600 mb-2">Level {level}</h3>
         <div className="w-full bg-space-dark rounded-full h-2 mb-2">
           <div 
             className="bg-gradient-to-r from-neon-blue to-neon-purple h-2 rounded-full transition-all duration-500"
@@ -29,7 +29,7 @@ const GameProgress = ({ stats }) => {
       </div>
 
       <div>
-        <h4 className="text-sm font-medium text-white mb-2">Achievements</h4>
+        <h4 className="text-sm font-medium text-red-600 mb-2">Achievements</h4>
         <div className="space-y-2">
           {achievements.map((achievement) => {
             const Icon = achievement.icon;
