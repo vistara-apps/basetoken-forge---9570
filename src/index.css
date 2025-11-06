@@ -4,19 +4,17 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Press Start 2P', cursive; /* Pixelated font */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(135deg, #0a0f1c 0%, #1a2332 50%, #0066ff 100%);
   min-height: 100vh;
+  /* Removed pixelated background image */
 }
 
-.glass-effect {
+glass-effect {
   backdrop-filter: blur(10px);
   background: rgba(26, 35, 50, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .neon-border {
