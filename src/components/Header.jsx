@@ -1,11 +1,10 @@
 import React from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { useAccount, useNetwork } from 'wagmi';
+import { useAccount } from 'wagmi';
 import { Coins, AlertTriangle } from 'lucide-react';
 
 const Header = () => {
-  const { isConnected } = useAccount();
-  const { chain } = useNetwork();
+  const { isConnected, chain } = useAccount();
 
   return (
     <header className="glass-effect border-b border-red-600">
